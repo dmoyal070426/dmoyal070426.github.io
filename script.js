@@ -1,10 +1,10 @@
 // Typing effect
 const text = "Dilip Moyal";
-let index = 0;
+let i = 0;
 function typeWriter() {
-  if (index < text.length) {
-    document.getElementById("typed-text").innerHTML += text.charAt(index);
-    index++;
+  if (i < text.length) {
+    document.getElementById("typed-text").textContent += text.charAt(i);
+    i++;
     setTimeout(typeWriter, 150);
   }
 }
@@ -16,4 +16,9 @@ function openPopup() {
 }
 function closePopup() {
   document.getElementById("popup").style.display = "none";
+}
+
+// Dark Mode
+function toggleDarkMode() {
+  document.body.classList.toggle("dark");
 }
