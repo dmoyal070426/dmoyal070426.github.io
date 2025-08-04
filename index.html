@@ -1,79 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dilip Moyal | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <div class="container fade-in">
-      <img src="dilip.jpg" alt="Dilip Moyal" class="profile-pic">
-      <h1><span id="typed-text"></span><span class="cursor">|</span></h1>
-      <p>Assistant Professor | Electrical Engineering</p>
-      <a href="#contact" class="btn">Contact Me</a>
+  <header class="hero">
+    <img src="dilip.jpg" alt="Dilip Moyal" class="profile-pic" />
+    <h1><span id="typed-text"></span><span class="cursor">|</span></h1>
+    <p>Assistant Professor | Electrical Engineering</p>
+    <div class="hero-buttons">
+      <a href="#about" class="btn">About Me</a>
       <button class="btn" onclick="openPopup()">Download Resume</button>
+      <button class="btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
     </div>
   </header>
 
   <section id="about" class="fade-in">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        I am an Assistant Professor in the Electrical Engineering Department with research interests in Power Electronics, Electric Vehicles & Python Programming (updating myself with ML algorithms). I enjoy guiding students and working on real-world energy challenges.
-      </p>
+    <h2>About Me</h2>
+    <p>I am an Assistant Professor in the Electrical Engineering Department with a strong interest in Power Electronics, Electric Vehicles, and AI-based Smart Energy Systems. My passion lies in guiding students and applying engineering knowledge to real-world problems.</p>
+  </section>
+
+  <section id="education" class="fade-in timeline">
+    <h2>Education</h2>
+    <div class="timeline-item">
+      <h3>Ph.D. (Pursuing)</h3>
+      <p>Area: AI in Power Electronics</p>
+    </div>
+    <div class="timeline-item">
+      <h3>M.Tech - Power Electronics and Drives</h3>
+      <p>SVNIT, Surat in 2011</p>
+    </div>
+    <div class="timeline-item">
+      <h3>B.E. - Electrical & Electronics Engineering</h3>
+      <p>Malwa Institute of technology, Indore in 2009</p>
     </div>
   </section>
 
-  <section id="skills" class="fade-in">
-    <div class="container">
-      <h2>Skills</h2>
-      <ul class="skills">
-        <li>MATLAB & Simulink</li>
-        <li>Python (ML/DL)</li>
-        <li>Power Electronics</li>
-      </ul>
+  <section id="experience" class="fade-in">
+    <h2>Experience</h2>
+    <div class="card">
+      <h3>Assistant Professor</h3>
+      <p>Electrical Department | 12+ years of teaching & research experience</p>
+    </div>
+    <div class="card">
+      <h3>Industry Projects</h3>
+      <p>Collaborated with Sinox Power and RPPL on real-time converters and fault detection</p>
     </div>
   </section>
 
-  <section id="projects" class="fade-in">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project-card">
-        <h3>LLC Resonant Converter for EV</h3>
-        <p>3.25 KW Full Bridge LLC converter designed using MATLAB.</p>
-        <a href="#" class="btn-small">View Report</a>
-      </div>
-      <div class="project-card">
-        <h3>AI Fault Detection</h3>
-        <p>ML model for classifying EV motor faults using real-time signals.</p>
-        <a href="#" class="btn-small">Watch Demo</a>
-      </div>
+  <section id="research" class="fade-in">
+    <h2>Research Papers</h2>
+    <ul class="papers">
+      <li><strong>AI Based Protection Scheme</strong> – Smart grid fault detection</li>
+      <li><strong>Defect Detection in Insulators</strong> – Deep learning-based approach</li>
+      <li><strong>3.25 KW LLC Converter</strong> – EV charging application</li>
+    </ul>
+  </section>
+
+  <section id="interests" class="fade-in">
+    <h2>Interests</h2>
+    <div class="grid">
+      <div class="icon-box">🔌 Power Electronics</div>
+      <div class="icon-box">⚡ Smart Grids</div>
+      <div class="icon-box">🚗 Electric Vehicles</div>
+      <div class="icon-box">🤖 AI/ML in Engineering</div>
+      <div class="icon-box">🧑‍🏫 Teaching</div>
     </div>
   </section>
 
   <section id="contact" class="fade-in">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:dilipmoyal@example.com">dilipmoyal@marwadieducation.edu.in</a></p>
-    </div>
+    <h2>Contact Me</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe-placeholder/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   </section>
 
   <footer>
-    <div class="container">
-      <p>© 2025 Dilip Moyal. All rights reserved.</p>
-    </div>
+    <p>© 2025 Dilip Moyal. All rights reserved.</p>
   </footer>
 
   <!-- Resume Popup -->
   <div class="popup" id="popup">
     <div class="popup-content">
       <span class="close-btn" onclick="closePopup()">&times;</span>
-      <h3>Download Resume</h3>
-      <p>Click below to download:</p>
-      <a href="resume.pdf" class="btn" download>Resume PDF</a>
+      <h3>Download My Resume</h3>
+      <p>Click the button below to download:</p>
+      <a href="resume.pdf" class="btn" download>Download Resume</a>
     </div>
   </div>
 </body>
