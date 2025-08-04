@@ -5,27 +5,29 @@
   <title>Dilip Moyal | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
-    <div class="container">
+    <div class="container fade-in">
       <img src="dilip.jpg" alt="Dilip Moyal" class="profile-pic">
-      <h1>Dilip Moyal</h1>
+      <h1><span id="typed-text"></span><span class="cursor">|</span></h1>
       <p>Assistant Professor | Electrical Engineering</p>
       <a href="#contact" class="btn">Contact Me</a>
+      <button class="btn" onclick="openPopup()">Download Resume</button>
     </div>
   </header>
 
-  <section id="about">
+  <section id="about" class="fade-in">
     <div class="container">
       <h2>About Me</h2>
       <p>
-        I am an Assistant Professor in the Electrical Engineering Department with research interests in Power Electronics, Electric Vehicles & Python Programming. I enjoy guiding students and working on real-world energy challenges.
+        I am an Assistant Professor in the Electrical Engineering Department with research interests in Power Electronics, Electric Vehicles & Python Programming (updating myself with ML algorithms). I enjoy guiding students and working on real-world energy challenges.
       </p>
     </div>
   </section>
 
-  <section id="skills">
+  <section id="skills" class="fade-in">
     <div class="container">
       <h2>Skills</h2>
       <ul class="skills">
@@ -36,21 +38,23 @@
     </div>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="fade-in">
     <div class="container">
       <h2>Projects</h2>
-      <div class="project">
+      <div class="project-card">
         <h3>LLC Resonant Converter for EV</h3>
-        <p>Designed a 3.25 KW LLC converter using MATLAB for EV fast charging.</p>
+        <p>3.25 KW Full Bridge LLC converter designed using MATLAB.</p>
+        <a href="#" class="btn-small">View Report</a>
       </div>
-      <div class="project">
-        <h3>AI Fault Classification in EV Motors</h3>
-        <p>Used ML algorithms to detect motor faults in real-time from drive data.</p>
+      <div class="project-card">
+        <h3>AI Fault Detection</h3>
+        <p>ML model for classifying EV motor faults using real-time signals.</p>
+        <a href="#" class="btn-small">Watch Demo</a>
       </div>
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="fade-in">
     <div class="container">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:dilipmoyal@example.com">dilipmoyal@marwadieducation.edu.in</a></p>
@@ -62,7 +66,15 @@
       <p>© 2025 Dilip Moyal. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Resume Popup -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h3>Download Resume</h3>
+      <p>Click below to download:</p>
+      <a href="resume.pdf" class="btn" download>Resume PDF</a>
+    </div>
+  </div>
 </body>
 </html>
-
-
