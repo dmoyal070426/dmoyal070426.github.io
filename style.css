@@ -199,4 +199,66 @@ footer {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+/* Testimonials Carousel */
+#testimonials {
+  background: var(--light);
+  padding: 50px 20px;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.testimonial-carousel {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+
+.testimonial {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  min-height: 180px;
+}
+
+.testimonial.active {
+  display: block;
+  opacity: 1;
+}
+
+.testimonial h4 {
+  margin-top: 15px;
+  color: var(--primary);
+}
+
+/* Navigation buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background 0.3s;
+}
+
+.prev:hover, .next:hover {
+  background-color: #222;
+}
+
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+
 
