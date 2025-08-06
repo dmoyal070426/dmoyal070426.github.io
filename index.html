@@ -6,6 +6,7 @@
   <title>Dilip Moyal | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 <body>
 <!-- Preloader -->
@@ -98,15 +99,16 @@
   </section>
 
   <section id="contact" class="fade-in">
-  <h2>Contact Me</h2>
-  <form action="https://formsubmit.co/your-dilipmoyal.er@gmail.com" method="POST" class="contact-form">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <h2>Contact Me</h2>
+    <form id="contact-form" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
     <button type="submit">Send Message</button>
-  </form>
-</section>
+    </form>
+    <p id="form-status" style="margin-top:10px;"></p>
+  </section>
+
 
   <footer>
     <p>© 2025 Dilip Moyal. All rights reserved.</p>
@@ -123,6 +125,7 @@
   </div>
 </body>
 </html>
+
 
 
 
