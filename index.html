@@ -5,99 +5,112 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dilip Moyal | Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <script src="script.js" defer></script>
 </head>
 <body>
-
-  <!-- Preloader -->
-  <div id="preloader">
-    <div class="loader"></div>
-  </div>
-
-  <!-- Header -->
-  <header>
-    <h1>Dilip Moyal</h1>
-    <p>Assistant Professor | Electrical Engineering</p>
-    <button class="btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  <div id="preloader"><div class="spinner"></div></div>
+  <header class="hero">
+    <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+    <h1>Dilip Moyal<span class="cursor">|</span></h1>
+    <p>Assistant Professor | Researcher | Learner</p>
+    <div class="hero-buttons">
+      <a href="#resume" class="btn">Resume</a>
+      <a href="#contact" class="btn">Contact</a>
+    </div>
   </header>
 
-  <!-- Profile Section -->
-  <section id="profile" class="fade-in">
-    <img src="profile.jpg" alt="Dilip Moyal" class="profile-pic">
-    <p>Hello! I'm Dilip Moyal, passionate about power electronics, research, and teaching. This site showcases my professional journey, projects, and interests.</p>
+  <section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <p>Hello! I am Dilip Moyal, an Assistant Professor in Electrical Engineering, passionate about research, innovation, and technology.</p>
   </section>
 
-  <!-- Resume Section -->
-  <section id="resume" class="fade-in">
-    <h2>Resume</h2>
-    <a href="resume.pdf" class="btn" download>Download Resume</a>
-  </section>
-
-  <!-- Education Section -->
   <section id="education" class="fade-in">
     <h2>Education</h2>
-    <ul class="timeline">
-      <li><strong>PhD (Pursuing)</strong> – XYZ University (2025– )</li>
-      <li><strong>M.Tech</strong> – ABC Institute, 2020</li>
-      <li><strong>B.Tech</strong> – DEF University, 2017</li>
-    </ul>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>PhD (Pursuing)</h3>
+        <p>Electrical Engineering - XYZ University</p>
+      </div>
+      <div class="timeline-item">
+        <h3>M.Tech</h3>
+        <p>Power Systems - ABC University</p>
+      </div>
+    </div>
   </section>
 
-  <!-- Experience Section -->
   <section id="experience" class="fade-in">
     <h2>Experience</h2>
-    <div class="card">Assistant Professor, XYZ Institute (2020–Present)</div>
-    <div class="card">Internship, Sinox Power</div>
+    <div class="card">
+      <h3>Assistant Professor</h3>
+      <p>Electrical Engineering Dept. - 4+ years experience</p>
+    </div>
   </section>
 
-  <!-- Research Section -->
-  <section id="research" class="fade-in">
+  <section id="interests" class="fade-in">
+    <h2>Interests</h2>
+    <div class="grid">
+      <div class="icon-box">Power Electronics</div>
+      <div class="icon-box">AI in Power Systems</div>
+      <div class="icon-box">EV Technology</div>
+      <div class="icon-box">Data Science</div>
+    </div>
+  </section>
+
+  <section id="papers" class="fade-in">
     <h2>Research Papers</h2>
-    <ul>
-      <li>AI Based Protection Scheme for Series Compensated Lines</li>
-      <li>3.25 KW Full Bridge LLC Resonant Converter for EV Charging</li>
+    <ul class="papers">
+      <li>AI Based Protection Scheme for Series Compensated Transmission Lines</li>
+      <li>Fault Classification in Electric Vehicle Drive Motors</li>
     </ul>
   </section>
 
-  <!-- Interests Section -->
-  <section id="interests" class="fade-in">
-    <h2>Interests</h2>
-    <div class="interests">
-      <span>⚡ Power Electronics</span>
-      <span>📊 Data Science</span>
-      <span>🤖 AI in Energy</span>
-      <span>🎓 Education</span>
-    </div>
+  <section id="resume" class="fade-in">
+    <h2>Resume</h2>
+    <p>Resume placeholder here. Add a download button when ready.</p>
   </section>
 
-  <!-- Testimonials Section -->
-  <section id="testimonials" class="fade-in">
+  <section id="testimonials">
     <h2>Testimonials</h2>
-    <div class="carousel">
-      <div class="testimonial active">"A wonderful mentor and researcher!" – Student A</div>
-      <div class="testimonial">"Highly dedicated and innovative." – Colleague B</div>
-      <div class="testimonial">"Excellent teaching skills." – Student C</div>
+    <div class="testimonial-carousel">
+      <div class="testimonial active">
+        <p>"An amazing mentor who inspires innovation."</p>
+        <h4>- Student A</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Great insights in Power Electronics and Smart Grids."</p>
+        <h4>- Colleague B</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Always ready to explore cutting-edge research."</p>
+        <h4>- Research Partner C</h4>
+      </div>
+      <button class="prev">❮</button>
+      <button class="next">❯</button>
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact" class="fade-in">
     <h2>Contact Me</h2>
     <form action="https://formspree.io/f/yourFormID" method="POST" class="contact-form">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <input type="hidden" name="_redirect" value="https://dmoyal070426.github.io/dilipmoyal070426.github.io/thank-you.html">
+      <input type="hidden" name="_redirect" value="https://yourdomain.com/thank-you.html">
       <button type="submit">Send Message</button>
+      <div id="form-status"></div>
     </form>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Dilip Moyal. All rights reserved.</p>
   </footer>
 
+  <div class="popup" id="thankYouPopup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="document.getElementById('thankYouPopup').style.display='none'">&times;</span>
+      <p>Thank you! Your message has been sent.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
