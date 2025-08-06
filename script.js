@@ -63,3 +63,22 @@ setInterval(nextTestimonial, 5000);
 
 // Initial load
 showTestimonial(testimonialIndex);
+(function () {
+  emailjs.init("YOUR_USER_ID"); // from EmailJS dashboard
+})();
+
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const status = document.getElementById("form-status");
+
+  emailjs.sendForm("service_ee3dnnz", "template_qx97hfw", this)
+    .then(function () {
+      status.innerHTML = "✅ Message sent successfully!";
+      status.style.color = "green";
+      document.getElementById("contact-form").reset();
+    }, function (error) {
+      status.innerHTML = "❌ Failed to send message. Try again.";
+      status.style.color = "red";
+    });
+});
+
