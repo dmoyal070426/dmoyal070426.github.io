@@ -1,139 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dilip Moyal | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
 </head>
 <body>
-<!-- Preloader -->
+
+  <!-- Preloader -->
   <div id="preloader">
-    <div class="spinner"></div>
+    <div class="loader"></div>
   </div>
-  <header class="hero">
-    <img src="dilip.jpg" alt="Dilip Moyal" class="profile-pic" />
-    <h1><span id="typed-text"></span><span class="cursor">|</span></h1>
+
+  <!-- Header -->
+  <header>
+    <h1>Dilip Moyal</h1>
     <p>Assistant Professor | Electrical Engineering</p>
-    <div class="hero-buttons">
-      <a href="#about" class="btn">About Me</a>
-      <button class="btn" onclick="openPopup()">Download Resume</button>
-      <button class="btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-    </div>
+    <button class="btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
   </header>
 
-  <section id="about" class="fade-in">
-    <h2>About Me</h2>
-    <p>I am an Assistant Professor in the Electrical Engineering Department with a strong interest in Power Electronics, Electric Vehicles, and AI-based Smart Energy Systems. My passion lies in guiding students and applying engineering knowledge to real-world problems.</p>
+  <!-- Profile Section -->
+  <section id="profile" class="fade-in">
+    <img src="profile.jpg" alt="Dilip Moyal" class="profile-pic">
+    <p>Hello! I'm Dilip Moyal, passionate about power electronics, research, and teaching. This site showcases my professional journey, projects, and interests.</p>
   </section>
 
-  <section id="education" class="fade-in timeline">
+  <!-- Resume Section -->
+  <section id="resume" class="fade-in">
+    <h2>Resume</h2>
+    <a href="resume.pdf" class="btn" download>Download Resume</a>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="fade-in">
     <h2>Education</h2>
-    <div class="timeline-item">
-      <h3>Ph.D. (Pursuing)</h3>
-      <p>Area: AI in Power Electronics</p>
-    </div>
-    <div class="timeline-item">
-      <h3>M.Tech - Power Electronics and Drives</h3>
-      <p>SVNIT, Surat in 2011</p>
-    </div>
-    <div class="timeline-item">
-      <h3>B.E. - Electrical & Electronics Engineering</h3>
-      <p>Malwa Institute of technology, Indore in 2009</p>
-    </div>
-  </section>
-
-  <section id="experience" class="fade-in">
-    <h2>Experience</h2>
-    <div class="card">
-      <h3>Assistant Professor</h3>
-      <p>Electrical Department | 12+ years of teaching & research experience</p>
-    </div>
-    <div class="card">
-      <h3>Industry Projects</h3>
-      <p>Collaborated with Sinox Power and RPPL on real-time converters and fault detection</p>
-    </div>
-  </section>
-
-  <section id="research" class="fade-in">
-    <h2>Research Papers</h2>
-    <ul class="papers">
-      <li><strong>AI Based Protection Scheme</strong> – Smart grid fault detection</li>
-      <li><strong>Defect Detection in Insulators</strong> – Deep learning-based approach</li>
-      <li><strong>3.25 KW LLC Converter</strong> – EV charging application</li>
+    <ul class="timeline">
+      <li><strong>PhD (Pursuing)</strong> – XYZ University (2025– )</li>
+      <li><strong>M.Tech</strong> – ABC Institute, 2020</li>
+      <li><strong>B.Tech</strong> – DEF University, 2017</li>
     </ul>
   </section>
- <section id="testimonials" class="fade-in">
-  <h2>Testimonials</h2>
-  <div class="testimonial-carousel">
-    <div class="testimonial active">
-      <p>"Dilip is one of the finest professors I've ever learned from. His classes are engaging and informative!"</p>
-      <h4>- Student, 2024 Batch</h4>
-    </div>
-    <div class="testimonial">
-      <p>"Excellent collaboration during our EV charger project. His expertise in converters is unmatched."</p>
-      <h4>- Project Engineer, Sinox Power</h4>
-    </div>
-    <div class="testimonial">
-      <p>"Always encourages innovation and smart thinking. A real asset to the academic community."</p>
-      <h4>- Faculty Peer</h4>
-    </div>
-    <!-- Add more if needed -->
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
-  </div>
-</section>
 
+  <!-- Experience Section -->
+  <section id="experience" class="fade-in">
+    <h2>Experience</h2>
+    <div class="card">Assistant Professor, XYZ Institute (2020–Present)</div>
+    <div class="card">Internship, Sinox Power</div>
+  </section>
 
+  <!-- Research Section -->
+  <section id="research" class="fade-in">
+    <h2>Research Papers</h2>
+    <ul>
+      <li>AI Based Protection Scheme for Series Compensated Lines</li>
+      <li>3.25 KW Full Bridge LLC Resonant Converter for EV Charging</li>
+    </ul>
+  </section>
+
+  <!-- Interests Section -->
   <section id="interests" class="fade-in">
     <h2>Interests</h2>
-    <div class="grid">
-      <div class="icon-box">🔌 Power Electronics</div>
-      <div class="icon-box">⚡ Smart Grids</div>
-      <div class="icon-box">🚗 Electric Vehicles</div>
-      <div class="icon-box">🤖 AI/ML in Engineering</div>
-      <div class="icon-box">🧑‍🏫 Teaching</div>
+    <div class="interests">
+      <span>⚡ Power Electronics</span>
+      <span>📊 Data Science</span>
+      <span>🤖 AI in Energy</span>
+      <span>🎓 Education</span>
     </div>
   </section>
-<section id="contact" class="fade-in">
-  <h2>Contact Me</h2>
-  <form action="https://formspree.io/f/yourFormID" method="POST" class="contact-form">
-        <!-- Form fields -->
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <!-- 👇 Add this line just before closing the form -->
-    <input type="hidden" name="_redirect" value="https://dmoyal070426.github.io/dilipmoyal070426.github.io/thank-you.html">
 
-    <button type="submit">Send Message</button>
-  </form>
-</section>
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="fade-in">
+    <h2>Testimonials</h2>
+    <div class="carousel">
+      <div class="testimonial active">"A wonderful mentor and researcher!" – Student A</div>
+      <div class="testimonial">"Highly dedicated and innovative." – Colleague B</div>
+      <div class="testimonial">"Excellent teaching skills." – Student C</div>
+    </div>
+  </section>
 
+  <!-- Contact Section -->
+  <section id="contact" class="fade-in">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/yourFormID" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <input type="hidden" name="_redirect" value="https://dmoyal070426.github.io/dilipmoyal070426.github.io/thank-you.html">
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Dilip Moyal. All rights reserved.</p>
+    <p>&copy; 2025 Dilip Moyal. All rights reserved.</p>
   </footer>
 
-  <!-- Resume Popup -->
-  <div class="popup" id="popup">
-    <div class="popup-content">
-      <span class="close-btn" onclick="closePopup()">&times;</span>
-      <h3>Download My Resume</h3>
-      <p>Click the button below to download:</p>
-      <a href="resume.pdf" class="btn" download>Download Resume</a>
-    </div>
-  </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
