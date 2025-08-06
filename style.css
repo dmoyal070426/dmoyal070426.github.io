@@ -292,5 +292,10 @@ footer {
 .contact-form button:hover {
   background-color: #111;
 }
+#form-status {
+  font-weight: bold;
+  font-size: 16px;
+}
+
 
 
