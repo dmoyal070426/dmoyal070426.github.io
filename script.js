@@ -8,7 +8,23 @@ function typeWriter() {
     setTimeout(typeWriter, 150);
   }
 }
-window.onload = typeWriter;
+
+window.addEventListener("load", () => {
+  typeWriter();
+
+  // Preloader fade-out
+  const preloader = document.getElementById("preloader");
+  preloader.style.opacity = "0";
+  setTimeout(() => {
+    preloader.style.display = "none";
+  }, 600);
+
+  // Initialize first testimonial
+  showTestimonial(testimonialIndex);
+
+  // Auto-slide testimonials
+  setInterval(nextTestimonial, 5000);
+});
 
 // Resume popup
 function openPopup() {
@@ -18,18 +34,11 @@ function closePopup() {
   document.getElementById("popup").style.display = "none";
 }
 
-// Dark Mode
+// Dark Mode toggle
 function toggleDarkMode() {
   document.body.classList.toggle("dark");
 }
-// Preloader fade-out
-window.addEventListener("load", () => {
-  const preloader = document.getElementById("preloader");
-  preloader.style.opacity = "0";
-  setTimeout(() => {
-    preloader.style.display = "none";
-  }, 600);
-});
+
 // Testimonials Carousel
 let testimonialIndex = 0;
 const testimonials = document.querySelectorAll(".testimonial");
@@ -55,30 +64,35 @@ function prevTestimonial() {
   showTestimonial(testimonialIndex);
 }
 
-nextBtn.addEventListener("click", nextTestimonial);
-prevBtn.addEventListener("click", prevTestimonial);
+if (prevBtn && nextBtn) {
+  nextBtn.addEventListener("click", nextTestimonial);
+  prevBtn.addEventListener("click", prevTestimonial);
+}
 
-// Auto-slide every 5 seconds
-setInterval(nextTestimonial, 5000);
-
-// Initial load
-showTestimonial(testimonialIndex);
+// Form Submit via EmailJS
 (function () {
-  emailjs.init("YOUR_USER_ID"); // from EmailJS dashboard
+  emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
 })();
 
-document.getElementById("contact-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  const status = document.getElementById("form-status");
+const contactForm = document.getElementById("contact-form");
+if (contactForm) {
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const status = document.getElementById("form-status");
 
-  emailjs.sendForm("service_ee3dnnz", "template_qx97hfw", this)
-    .then(function () {
-      status.innerHTML = "✅ Message sent successfully!";
-      status.style.color = "green";
-      document.getElementById("contact-form").reset();
-    }, function (error) {
-      status.innerHTML = "❌ Failed to send message. Try again.";
-      status.style.color = "red";
-    });
-});
+    emailjs.sendForm("service_ee3dnnz", "template_qx97hfw", this)
+      .then(function () {
+        status.innerHTML = "✅ Message sent successfully!";
+        status.style.color = "green";
+        contactForm.reset();
+      }, function (error) {
+        status.innerHTML = "❌ Failed to send message. Try again.";
+        status.style.color = "red";
+      });
+  });
+}
 
+// Optional: Thank-you popup (instead of redirect)
+function showThankYouPopup() {
+  alert("Thank you for contacting me!");
+}
