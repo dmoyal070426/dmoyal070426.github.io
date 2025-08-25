@@ -1,118 +1,314 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dilip Moyal | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jane Doe — Portfolio & CV</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-NiZB1..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div id="preloader"><div class="spinner"></div></div>
-  <header class="hero">
-    <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
-    <h1>Dilip Moyal<span class="cursor">|</span></h1>
-    <p>Assistant Professor | Researcher | Learner</p>
-    <div class="hero-buttons">
-      <a href="#resume" class="btn">Resume</a>
-      <a href="#contact" class="btn">Contact</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">
+        <img src="https://images.unsplash.com/photo-1531123414780-f6f83f44b7be?q=80&w=64&auto=format&fit=crop&crop=faces" alt="logo" />
+        <span>Jane Doe</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <section id="about" class="fade-in">
-    <h2>About Me</h2>
-    <p>Hello! I am Dilip Moyal, an Assistant Professor in Electrical Engineering, passionate about research, innovation, and technology.</p>
-  </section>
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <h1>Hi, I'm <span class="accent">Jane Doe</span></h1>
+          <p class="subtitle">Product Designer & Front‑end Developer — Building delightful web experiences.</p>
 
-  <section id="education" class="fade-in">
-    <h2>Education</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <h3>PhD (Pursuing)</h3>
-        <p>Electrical Engineering - Marwadi University, Rajkot</p>
+          <div class="hero-ctas">
+            <a class="btn primary" href="#projects">View Work</a>
+            <a class="btn ghost" href="#contact">Hire Me</a>
+            <a class="btn download" href="assets/Jane_Doe_CV.pdf" download>Download CV <i class="fa fa-download"></i></a>
+          </div>
+
+          <div class="socials">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="portrait">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop&crop=faces" alt="Jane Doe" />
+          </div>
+          <div class="hero-card">
+            <h3>Available for freelance</h3>
+            <p>Open to remote and on-site projects. Let's make something great together.</p>
+          </div>
+        </div>
       </div>
-      <div class="timeline-item">
-        <h3>M.Tech</h3>
-        <p>Power Electronics & Drive 
-        SVNIT, Surat</p>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="two-col">
+          <div>
+            <h2>About me</h2>
+            <p>I’m a product-minded front-end developer and designer with 6+ years building accessible, performant web apps. I enjoy translating complex problems into clear UI and delightful interactions.</p>
+
+            <ul class="meta">
+              <li><strong>Location:</strong> Bengaluru, India</li>
+              <li><strong>Email:</strong> <a href="mailto:jane@domain.com">jane@domain.com</a></li>
+              <li><strong>Freelance:</strong> Available</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Quick facts</h3>
+            <ul class="facts">
+              <li><strong>Clients:</strong> 40+</li>
+              <li><strong>Years:</strong> 6</li>
+              <li><strong>Focus:</strong> Web apps, design systems</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <h2>Skills</h2>
+
+        <div class="skill-grid">
+          <div class="skill">
+            <div class="skill-head">
+              <span>HTML & CSS</span><span class="percent">95%</span>
+            </div>
+            <div class="bar-bg"><div class="bar" data-percent="95"></div></div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-head">
+              <span>JavaScript</span><span class="percent">90%</span>
+            </div>
+            <div class="bar-bg"><div class="bar" data-percent="90"></div></div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-head">
+              <span>React</span><span class="percent">85%</span>
+            </div>
+            <div class="bar-bg"><div class="bar" data-percent="85"></div></div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-head">
+              <span>Design</span><span class="percent">88%</span>
+            </div>
+            <div class="bar-bg"><div class="bar" data-percent="88"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <h2>Selected Projects</h2>
+
+        <div class="projects-controls">
+          <div class="filters">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="web">Web</button>
+            <button class="filter" data-filter="design">Design</button>
+            <button class="filter" data-filter="mobile">Mobile</button>
+          </div>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Project item -->
+          <article class="project-item" data-tags="web design">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=900&auto=format&fit=crop" alt="Project A" />
+            <div class="project-meta">
+              <h3>Design System</h3>
+              <p>Component library and documentation site for a fintech platform.</p>
+              <div class="project-actions">
+                <button class="btn ghost open-project" data-title="Design System" data-img="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400&auto=format&fit=crop">Preview</button>
+                <a class="btn" href="#" target="_blank">Case study</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-item" data-tags="web">
+            <img src="https://images.unsplash.com/photo-1523475496153-3d6cc8a0df7a?q=80&w=900&auto=format&fit=crop" alt="Project B" />
+            <div class="project-meta">
+              <h3>Campaign Microsite</h3>
+              <p>Interactive microsite for a product launch — animated and responsive.</p>
+              <div class="project-actions">
+                <button class="btn ghost open-project" data-title="Campaign Microsite" data-img="https://images.unsplash.com/photo-1523475496153-3d6cc8a0df7a?q=80&w=1400&auto=format&fit=crop">Preview</button>
+                <a class="btn" href="#" target="_blank">Case study</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-item" data-tags="mobile">
+            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=900&auto=format&fit=crop" alt="Project C" />
+            <div class="project-meta">
+              <h3>Mobile App UI</h3>
+              <p>Design and prototype for a native mobile experience.</p>
+              <div class="project-actions">
+                <button class="btn ghost open-project" data-title="Mobile App UI" data-img="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1400&auto=format&fit=crop">Preview</button>
+                <a class="btn" href="#" target="_blank">Case study</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-item" data-tags="design">
+            <img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=900&auto=format&fit=crop" alt="Project D" />
+            <div class="project-meta">
+              <h3>Brand Refresh</h3>
+              <p>Visual identity and marketing assets for a SaaS brand.</p>
+              <div class="project-actions">
+                <button class="btn ghost open-project" data-title="Brand Refresh" data-img="https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=1400&auto=format&fit=crop">Preview</button>
+                <a class="btn" href="#" target="_blank">Case study</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT LIGHTBOX/MODAL -->
+    <div id="projectModal" class="modal" aria-hidden="true">
+      <div class="modal-inner">
+        <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+        <div class="modal-content">
+          <img id="modalImage" src="" alt="Project preview" />
+          <div class="modal-side">
+            <h3 id="modalTitle">Project title</h3>
+            <p id="modalDesc">Project description will appear here.</p>
+            <a id="modalCase" class="btn" href="#" target="_blank">View case study</a>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
 
-  <section id="experience" class="fade-in">
-    <h2>Experience</h2>
-    <div class="card">
-      <h3>Assistant Professor</h3>
-      <p>Electrical Engineering Dept. - 12+ years experience</p>
-    </div>
-  </section>
+    <!-- RESUME / TIMELINE -->
+    <section id="resume" class="section resume">
+      <div class="container">
+        <h2>Resume</h2>
 
-  <section id="interests" class="fade-in">
-    <h2>Interests</h2>
-    <div class="grid">
-      <div class="icon-box">Power Electronics</div>
-      <div class="icon-box">AI in Power Systems</div>
-      <div class="icon-box">EV Technology</div>
-      <div class="icon-box">Data Science</div>
-    </div>
-  </section>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">2021 — Present</div>
+            <div class="timeline-body">
+              <h4>Senior Product Designer — Fintech Co</h4>
+              <p>Leading product initiatives, design systems and cross-functional teams on multiple high-impact features.</p>
+            </div>
+          </div>
 
-  <section id="papers" class="fade-in">
-    <h2>Research Papers</h2>
-    <ul class="papers">
-      <li>AI Based Protection Scheme for Series Compensated Transmission Lines</li>
-      <li>Fault Classification in Electric Vehicle Drive Motors</li>
-    </ul>
-  </section>
+          <div class="timeline-item">
+            <div class="timeline-year">2018 — 2021</div>
+            <div class="timeline-body">
+              <h4>Front-end Developer — Studio</h4>
+              <p>Built responsive web apps, optimized performance and accessibility, collaborated with product and engineering teams.</p>
+            </div>
+          </div>
 
-  <section id="resume" class="fade-in">
-    <h2>Resume</h2>
-    <p>Resume placeholder here. Add a download button when ready.</p>
-  </section>
+          <div class="timeline-item">
+            <div class="timeline-year">2016 — 2018</div>
+            <div class="timeline-body">
+              <h4>UI Designer — Agency</h4>
+              <p>Visual design, prototypes, and creative direction for digital campaigns.</p>
+            </div>
+          </div>
+        </div>
 
-  <section id="testimonials">
-    <h2>Testimonials</h2>
-    <div class="testimonial-carousel">
-      <div class="testimonial active">
-        <p>"An amazing mentor who inspires innovation."</p>
-        <h4>- Student A</h4>
+        <a class="btn primary" href="assets/Jane_Doe_CV.pdf" download>Download full CV</a>
       </div>
-      <div class="testimonial">
-        <p>"Great insights in Power Electronics and Smart Grids."</p>
-        <h4>- Colleague B</h4>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="two-col">
+          <div>
+            <p>If you'd like to work together send a message or email me at <a href="mailto:jane@domain.com">jane@domain.com</a>.</p>
+
+            <ul class="contact-meta">
+              <li><i class="fa fa-map-marker-alt"></i> Bengaluru, India</li>
+              <li><i class="fa fa-clock"></i> Mon — Fri, 9am — 6pm IST</li>
+              <li><i class="fa fa-briefcase"></i> Available for contract</li>
+            </ul>
+          </div>
+
+          <div>
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="form-row">
+                <label for="name">Name</label>
+                <input id="name" name="name" required />
+                <small class="error" id="err-name"></small>
+              </div>
+
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required />
+                <small class="error" id="err-email"></small>
+              </div>
+
+              <div class="form-row">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <small class="error" id="err-message"></small>
+              </div>
+
+              <div class="form-row">
+                <button type="submit" class="btn primary">Send message</button>
+                <div id="formStatus" class="form-status" aria-live="polite"></div>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-      <div class="testimonial">
-        <p>"Always ready to explore cutting-edge research."</p>
-        <h4>- Research Partner C</h4>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="foot-inner">
+        <p>© <span id="year"></span> Jane Doe — Built with ❤️</p>
+        <p class="tiny">Template inspired by Wix portfolio layouts.</p>
       </div>
-      <button class="prev">❮</button>
-      <button class="next">❯</button>
     </div>
-  </section>
-
-  <section id="contact" class="fade-in">
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/mgvzndkw" method="POST" class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <input type="hidden" name="_redirect" value="https://dmoyal070624.github.io/thank-you.html">
-      <button type="submit">Send Message</button>
-      <div id="form-status"></div>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Dilip Moyal. All rights reserved.</p>
   </footer>
 
-  <div class="popup" id="thankYouPopup">
-    <div class="popup-content">
-      <span class="close-btn" onclick="document.getElementById('thankYouPopup').style.display='none'">&times;</span>
-      <p>Thank you! Your message has been sent.</p>
-    </div>
-  </div>
-
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>
-
